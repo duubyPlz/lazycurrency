@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Exo:200,400,700&subset=latin-ext');
+
+body {
+  font-family: 'Exo', 'Noto Sans Japanese', sans-serif;
+  font-size: 40px;
+  background-color: #0b0f12;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 200;
+  overflow-x: auto;
+}
+
+.section {
+  width: 500px;
+  margin: auto;
+  text-align: right;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.currency {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 25px;
+  margin-top: 5px;
+}
+
+textarea {
+  overflow: hidden;
+  word-wrap: break-word;
+  resize: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 12px 15px;
+  border: none;
+  border-left: solid 1px rgba(0, 0, 0, 0);
+  border-right: solid 1px rgba(0, 0, 0, 0);
+  color: white;
+}
+
+.red {
+  color: rgb(236, 0, 0);
+}
+
+.green {
+  color: rgb(11, 220, 0);
+}
+
+.rate {
+  width: 500px;
+  margin: auto;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+footer {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 80%;
+}
