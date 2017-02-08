@@ -23,7 +23,7 @@ body {
   margin-top: 5px;
 }
 
-textarea {
+.textarea {
   overflow: hidden;
   word-wrap: break-word;
   resize: none;
