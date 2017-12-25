@@ -94,10 +94,16 @@ $('.currency').on('click', function() {
 
 function updateCurrencyDisplay() {
     var activeCurrency = $('.currency.active');
-    if (activeCurrency.hasClass('currency-twd')) {
-        $('.currency-picker').css('transform', 'translate(200px)');
+    var width = activeCurrency.width() + 7;
+    var doubleWidth = (activeCurrency.width() * 2) + 7;
+    console.log('WIDTHHH: ' + width);
+
+    var translateString = 'translate(' + width + 'px)';
+    var doubleTranslateString = 'translate(' + doubleWidth + 'px)';
+;    if (activeCurrency.hasClass('currency-twd')) {
+        $('.currency-picker').css('transform', doubleTranslateString);
     } else if (activeCurrency.hasClass('currency-myr')) {
-        $('.currency-picker').css('transform', 'translate(100px)');
+        $('.currency-picker').css('transform', translateString);
     } else if (activeCurrency.hasClass('currency-hkd')) {
         $('.currency-picker').css('transform', 'translate(0px)');
     }

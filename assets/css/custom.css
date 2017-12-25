@@ -74,13 +74,13 @@ body {
 }
 
 .currency-picker {
-  -webkit-animation-duration: 10s;
-  animation-duration: 10s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
 }
 
 .currency {
-  -webkit-animation-duration: 10s;
-  animation-duration: 10s;
   cursor: pointer;
 }
 
