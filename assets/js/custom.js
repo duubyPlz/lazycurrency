@@ -95,14 +95,14 @@ function fetchData(currency) {
                 // online but can't fetch
                 $('#status').html("<span class='red'>&#x25cf;</span>");
                 $("#last-updated").removeClass('timeago');
-                $('#last-updated').html('never &#x25cf;&#xFE3F;&#x25cf;');
+                $('#last-updated').html('hardcoded &#x25cf;&#xFE3F;&#x25cf;');
             }
         }, 1000);
     } // else not online, grey dot
     // then step 1: hard code values
     // step 2: instead of hard coded values,
     // use values from cookies from a while ago 
-    // (better than "never")
+    // (better than "hardcoded")
 }
 
 function updateCurrencyDisplay() {
