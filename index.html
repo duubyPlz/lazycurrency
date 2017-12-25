@@ -22,22 +22,40 @@
 <body>
   <div class='section'>
     <input type="number" class='textarea' id='aud'>
-    <p class='currency'><span class='green'>AUD</span></p>
+    <p class='currency'>AUD</p>
   </div>
   <div class='section'>
-    <input type="number" class='textarea' id='twd'>
-    <p class='currency'><span class='red'>TWD</span></p>
+    <input type="number" class='textarea' id='myr'>
+    <div class='currency-picker'>
+      <span class='currency currency-twd blue'>TWD</span>
+      <span class='currency currency-myr red active'>MYR</span>
+      <span class='currency currency-hkd green'>HKD</span>
+    </div>
+
+<!--     <div class="dropdown">
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        Dropdown
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu pull-right" aria-labelledby="dropdownMenu1">
+        <li><a href="#">Action</a></li>
+        <li><a href="#">Another action</a></li>
+      </ul>
+    </div> -->
+
   </div>
   <div class='bottom'>
-    rate <b>1</b>:<b id='ratio'>23</b>
-    <!-- <footer>updated <b id='last-updated'>?? ago</b></footer> -->
-    <span id='status'><span style='color: grey'>●</span>
+    <div>
+      rate <b>1</b>:<b id='ratio'>--</b>
+      <span id='status' data-toggle="tooltip" data-placement="right" title="Tooltip on left"><span style='color: grey;'>&#x25cf;</span></span>
+    </div>
+    <footer>data from <b id='last-updated'>never &#x25cf;&#xFE3F;&#x25cf;</b></footer>
   </div>
   
   <!-- js.cookie.js -->
-  <!-- <script src="assets/js/js.cookie.js"></script> -->
+  <script src="assets/js/js.cookie.js"></script>
   <!-- jquery.timeago.js -->
-  <!-- <script src="assets/js/jquery.timeago.js"></script> -->
+  <script src="assets/js/jquery.timeago.js"></script>
   <!-- money.js -->
   <script src="assets/js/money.js"></script>
   <!-- Custom -->
