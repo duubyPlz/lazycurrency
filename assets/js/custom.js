@@ -102,8 +102,8 @@ function updateCurrencyDisplay() {
     var activeCurrency = $('.currency.active');
     var symbol = activeCurrency.attr('id');
 
-    var width = activeCurrency.width() + 7;
-    var doubleWidth = (activeCurrency.width() * 2) + 7;
+    var width = activeCurrency.width();
+    var doubleWidth = (activeCurrency.width() * 2) - 7;
     var translateString = 'translate(' + width + 'px)';
     var doubleTranslateString = 'translate(' + doubleWidth + 'px)';
     if (symbol == 'TWD') {

@@ -55,11 +55,23 @@ body {
   margin-bottom: 50px;
 }
 
-.currency {
+.currency,
+#AUD {
   color: rgba(255, 255, 255, 0.3);
   font-size: 25px;
   margin-top: 5px;
+}
+
+#AUD {
+  cursor: default;
+}
+
+.currency {
   cursor: pointer;
+}
+
+.currency:not(.active) {
+  font-size: 50%;
 }
 
 .textarea {
