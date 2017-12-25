@@ -73,6 +73,17 @@ body {
   color: white;
 }
 
+.currency-picker {
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
+}
+
+.currency {
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
+  cursor: pointer;
+}
+
 .currency.active {
   background-color: red;
 }

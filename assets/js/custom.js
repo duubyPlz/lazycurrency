@@ -83,7 +83,25 @@ $('#twd').on('keyup', function() {
 });
 
 // > b) currency selector
-// $('#currency.active')
+updateCurrencyDisplay();
+
+$('.currency').on('click', function() {
+    var currentCurrency = $(this);
+    $(this).siblings().removeClass('active');
+    $(this).addClass('active');
+    updateCurrencyDisplay();
+})
+
+function updateCurrencyDisplay() {
+    var activeCurrency = $('.currency.active');
+    if (activeCurrency.hasClass('currency-twd')) {
+        $('.currency-picker').css('transform', 'translate(200px)');
+    } else if (activeCurrency.hasClass('currency-myr')) {
+        $('.currency-picker').css('transform', 'translate(100px)');
+    } else if (activeCurrency.hasClass('currency-hkd')) {
+        $('.currency-picker').css('transform', 'translate(0px)');
+    }
+}
 
 function convert(toConvert, isAud) {
     var returnVal;
