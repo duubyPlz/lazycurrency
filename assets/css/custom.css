@@ -151,7 +151,8 @@ time {
     width: 600px;
   }
 
-  .currency {
+  .currency,
+  #AUD {
     font-size: 50px;
   }
 

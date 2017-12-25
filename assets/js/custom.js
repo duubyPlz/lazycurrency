@@ -57,7 +57,7 @@ updateCurrencyDisplay();
 $('.currency').on('click', function() {
     $('#input-convert').val("");
     $('#input-root').val("");
-    
+
     var currentCurrency = $(this);
     $(this).siblings().removeClass('active');
     $(this).addClass('active');
@@ -99,6 +99,10 @@ function fetchData(currency) {
             }
         }, 1000);
     } // else not online, grey dot
+    // then step 1: hard code values
+    // step 2: instead of hard coded values,
+    // use values from cookies from a while ago 
+    // (better than "never")
 }
 
 function updateCurrencyDisplay() {
