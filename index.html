@@ -21,15 +21,15 @@
 </head>
 <body>
   <div class='section'>
-    <input type="number" class='textarea' id='aud'>
-    <p class='currency currency-aud'>AUD</p>
+    <input type="number" class='textarea' id='input-root'>
+    <p id="AUD" class='currency'>AUD</p>
   </div>
   <div class='section'>
-    <input type="number" class='textarea' id='myr'>
+    <input type="number" class='textarea' id='input-convert'>
     <div class='currency-picker'>
-      <span class='currency currency-twd'>TWD</span>
-      <span class='currency currency-myr active'>MYR</span>
-      <span class='currency currency-hkd'>HKD</span>
+      <span id="TWD" class='currency'>TWD</span>
+      <span id="MYR" class='currency active'>MYR</span>
+      <span id="HKD" class='currency'>HKD</span>
     </div>
 
 <!--     <div class="dropdown">
@@ -49,7 +49,7 @@
       rate <b>1</b>:<b id='ratio'>--</b>
       <span id='status' data-toggle="tooltip" data-placement="right" title="Tooltip on left"><span style='color: grey;'>&#x25cf;</span></span>
     </div>
-    <footer>data from <b id='last-updated'>never &#x25cf;&#xFE3F;&#x25cf;</b></footer>
+    <footer>data from <time class="timeago" id='last-updated' datetime="">never &#x25cf;&#xFE3F;&#x25cf;</time></footer>
   </div>
   
   <!-- js.cookie.js -->

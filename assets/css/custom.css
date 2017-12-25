@@ -75,26 +75,26 @@ body {
 }
 
 .currency-picker {
-    -webkit-transition: 1s;
-    -moz-transition: 1s;
-    -o-transition: 1s;
-    transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
 }
 
-.currency-aud {
+#AUD {
   /*color: rgba(255, 255, 255, 0.9);*/
   color: rgb(11, 220, 0);
 }
 
-.currency-twd.active {
+#TWD.active {
   color: #0076B6;
 }
 
-.currency-myr.active {
+#MYR.active {
   color: rgb(236, 0, 0);
 }
 
-.currency-hkd.active {
+#HKD.active {
   color: #FFD900;
 }
 
@@ -122,6 +122,10 @@ body {
 footer {
   color: rgba(255, 255, 255, 0.5);
   font-size: 50%;
+}
+
+time {
+  font-weight: 700;
 }
 
 @media screen and (max-device-width: 768px)
