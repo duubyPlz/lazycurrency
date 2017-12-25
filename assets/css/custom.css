@@ -56,9 +56,10 @@ body {
 }
 
 .currency {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.3);
   font-size: 25px;
   margin-top: 5px;
+  cursor: pointer;
 }
 
 .textarea {
@@ -80,28 +81,30 @@ body {
     transition: 1s;
 }
 
-.currency {
-  cursor: pointer;
+.currency-aud {
+  /*color: rgba(255, 255, 255, 0.9);*/
+  color: rgb(11, 220, 0);
 }
 
-.currency.active {
-  background-color: red;
+.currency-twd.active {
+  color: #0076B6;
 }
 
-.red {
+.currency-myr.active {
   color: rgb(236, 0, 0);
 }
 
+.currency-hkd.active {
+  color: #FFD900;
+}
+
+/* for the dot */
 .green {
   color: rgb(11, 220, 0);
 }
 
-.blue {
-  color: #0076B6;
-}
-
-.gold {
-  color: #FFD900;
+.red {
+  color: rgb(236, 0, 0);
 }
 
 .bottom {
