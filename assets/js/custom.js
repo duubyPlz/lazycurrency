@@ -55,22 +55,15 @@ $('#input-convert').on('keyup', function() {
 updateCurrencyDisplay();
 
 $('.currency').on('click', function() {
+    $('#input-convert').val("");
+    $('#input-root').val("");
+    
     var currentCurrency = $(this);
     $(this).siblings().removeClass('active');
     $(this).addClass('active');
     updateCurrencyDisplay();
-
-    // reconvert
-    if ($('#input-root').val() != '') {
-        setTimeout(function() {
-            var toConvert = $('#input-root').val();
-            var toDisplay = convert(toConvert, true);
-            $('#input-convert').val(toDisplay);
-        }, 600);
-    }
 });
 
-// todo fix if online statements
 function fetchData(currency) {
     if (navigator.onLine) {
         // skip twd
