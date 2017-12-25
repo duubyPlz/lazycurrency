@@ -70,6 +70,7 @@ $('.currency').on('click', function() {
 });
 
 function fetchData(currency) {
+    // TODO separate online dot as interval check
     if (navigator.onLine) {
         // skip twd
         if (currency == 'TWD') {
@@ -105,7 +106,7 @@ function fetchData(currency) {
         }, 1000);
     } else {
         // else not online, grey dot
-        // todo step 2: instead of hard coded values,
+        // TODO step 2: instead of hard coded values,
         // use values from cookies from a while ago 
         // (better than "hardcoded")
 
