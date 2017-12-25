@@ -1,7 +1,6 @@
 // init
 jQuery(document).ready(function() {
   jQuery("time.timeago").timeago();
-  console.log("LOADED");
 });
 
 // toggle all tooltips
@@ -24,7 +23,13 @@ $(function () {
 // console.log(Cookies.get('lastUpdated'));
 // console.log(herp);
 
-var rate = 23.50; // default val
+var hardcodedValues = {
+    'TWD': 23.5,
+    'MYR': 3.15,
+    'HKD': 6,
+}
+
+var rate = hardcodedValues['MYR'];
 var success = false;
 
 // 4. ux
@@ -98,11 +103,19 @@ function fetchData(currency) {
                 $('#last-updated').html('hardcoded &#x25cf;&#xFE3F;&#x25cf;');
             }
         }, 1000);
-    } // else not online, grey dot
-    // then step 1: hard code values
-    // step 2: instead of hard coded values,
-    // use values from cookies from a while ago 
-    // (better than "hardcoded")
+    } else {
+        // else not online, grey dot
+        // todo step 2: instead of hard coded values,
+        // use values from cookies from a while ago 
+        // (better than "hardcoded")
+
+        rate = hardcodedValues[currency];
+        $('#ratio').html(rate.toFixed(3));
+
+        $('#status').html("<span class='grey'>&#x25cf;</span>");
+        $("#last-updated").removeClass('timeago');
+        $('#last-updated').html('hardcoded &#x25cf;&#xFE3F;&#x25cf;');
+    }
 }
 
 function updateCurrencyDisplay() {

@@ -119,6 +119,10 @@ body {
   color: rgb(236, 0, 0);
 }
 
+.grey {
+  color: grey;
+}
+
 .bottom {
   width: 500px;
   margin: auto;
