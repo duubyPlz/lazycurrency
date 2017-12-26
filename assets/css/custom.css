@@ -103,11 +103,11 @@ body {
 }
 
 #MYR.active {
-  color: rgb(236, 0, 0);
+  color: #FFD900;
 }
 
 #HKD.active {
-  color: #FFD900;
+  color: rgb(236, 0, 0);
 }
 
 /* for the dot */

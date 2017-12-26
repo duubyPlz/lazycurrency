@@ -35,6 +35,7 @@ var success = false;
 // 4. ux
 // > a) input fields
 $('#input-root').on('click', function() {
+    // means that spinners can't be used though
     $('#input-convert').val("");
     $('#input-root').val("");
 });
