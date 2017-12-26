@@ -8,16 +8,6 @@ $(function () {
   $('[data-toggle="tooltip"]').tooltip();
 });
 
-// // 0. initialise previous timestamp
-// var lastUpdated = Cookies.get('lastUpdated');
-// if (lastUpdated == null) {
-//     lastUpdated = jQuery.timeago(new Date());
-//     Cookies.set('lastUpdated', lastUpdated);
-//     Cookies.set('name', 'value');
-// } else {
-//     console.log("exists");
-// }
-
 // var herp = Cookies.get('name');
 // console.log(Cookies.get());
 // console.log(Cookies.get('lastUpdated'));
@@ -75,7 +65,7 @@ function fetchData(currency) {
     if (navigator.onLine) {
         // skip twd
         if (currency == 'TWD') {
-            rate = 23.50;
+            rate = hardcodedValues[currency];
             success = false;
         } else {        
             // 1b. update rate
