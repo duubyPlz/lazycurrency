@@ -85,6 +85,7 @@ function fetchData(currency) {
                 // proper usage:
                 // https://stackoverflow.com/questions/5839720/how-do-i-use-jquery-timeago-to-live-update
                 $("#last-updated").addClass('timeago');
+                $("#last-updated").attr('datetime');
 
                 $('.timeago').timeago('update', new Date());
                 $('#status').html("<span class='green'>&#x25cf;</span>");
@@ -92,6 +93,7 @@ function fetchData(currency) {
                 // online but can't fetch
                 $('#status').html("<span class='red'>&#x25cf;</span>");
                 $("#last-updated").removeClass('timeago');
+                $('#last-updated').removeAttr('datetime');
                 $('#last-updated').html('hardcoded &#x25cf;&#xFE3F;&#x25cf;');
             }
         }, 1000);
