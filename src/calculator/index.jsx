@@ -1,2 +1,2 @@
-const Calculator = () => <div>calculator</div>;
-export default Calculator;
+const Calculator = () => <div>calculator</div>
+export default Calculator

@@ -1,5 +1,6 @@
-import Calculator from "./calculator";
-import Footer from "./footer";
+import Calculator from './calculator'
+import Footer from './footer'
+import './App.css'
 
 const App = () => {
   return (
@@ -7,7 +8,7 @@ const App = () => {
       <Calculator />
       <Footer />
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App
