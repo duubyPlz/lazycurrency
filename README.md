@@ -12,6 +12,15 @@ AUD <-> TWD/MYR/HKD (mainly for TWD) for the lazy.
 - `npm install`
 - `npm start` to start dev
 
+### Stack
+
+- React, Vite, prettier, eslint (husky + lint-staged)
+- [CSS modules](https://vitejs.dev/guide/features.html#css-modules)
+- Sweet state
+- Since fixer.io is a REST api, using `fetch`
+
+---
+
 ## Links
 
 - Precommit lint-staged docs: <https://github.com/lint-staged/lint-staged?tab=readme-ov-file#configuration>

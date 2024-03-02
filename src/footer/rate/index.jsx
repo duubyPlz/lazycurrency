@@ -1,8 +1,9 @@
 import Status from './status';
+import Number from './number';
 
 const Rate = () => (
   <div>
-    data from blah <Status />
+    rate <Number>1</Number>:<Number>--</Number> <Status />
   </div>
 );
 
