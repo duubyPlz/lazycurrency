@@ -1,10 +1,11 @@
 import Currency from '../../currency';
 import { CurrencyType } from '../../currency/types.tsx';
+import styles from './styles.module.css';
 
-// TODO flex
+// TODO Styles: flex
 export const DynamicPicker = () => {
   return (
-    <div>
+    <div className={styles.wrapper}>
       <Currency type={CurrencyType.TWD}>
         TWD
       </Currency>

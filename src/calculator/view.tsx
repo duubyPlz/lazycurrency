@@ -6,12 +6,12 @@ import styles from './styles.module.css';
 const Calculator = () => {
   return (
     <div className={styles.wrapper}>
-      {/* TODO inherit flex styles */}
-      <div>
+      {/* TODO Styles: inherit flex styles */}
+      <div className={styles.child}>
         <Field />
         <StaticPicker />
       </div>
-      <div>
+      <div className={styles.child}>
         <Field />
         <DynamicPicker />
       </div>
