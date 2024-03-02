@@ -11,7 +11,7 @@
     "preview": "vite preview"
   },
   "lint-staged": {
-    "*.{js,jsx, tsx}": [
+    "*.{js,jsx,tsx}": [
       "eslint --cache --fix"
     ],
     "*.{js,jsx,ts,tsx,md,html,css}": "prettier --write"
