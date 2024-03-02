@@ -3,8 +3,11 @@ import Currency from '../../currency';
 export const DynamicPicker = () => {
   return (
     <div>
-      a bunch of currencies{' '}
-      <Currency>HKD</Currency>
+      <Currency type='twd'>TWD</Currency>
+      <Currency type='myr'>MYR</Currency>
+      <Currency type='hkd' active>
+        HKD
+      </Currency>
     </div>
   );
 };

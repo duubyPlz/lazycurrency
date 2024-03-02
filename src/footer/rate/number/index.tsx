@@ -1,4 +1,4 @@
-import styles from './number.module.css';
+import styles from './styles.module.css';
 
 type NumberProps = {
   children: string;

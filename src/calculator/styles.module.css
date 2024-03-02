@@ -1,0 +1,10 @@
+/* TODO make flex & add between widths etc. */
+
+.wrapper {
+  display: block;
+  width: 500px;
+  margin: auto;
+  text-align: right;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}

@@ -1,4 +1,4 @@
-import styles from './data-tracker.module.css';
+import styles from './styles.module.css';
 
 const DataTracker = () => (
   <div className={styles.wrapper}>

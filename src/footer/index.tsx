@@ -1,6 +1,6 @@
 import DataTracker from './data-tracker';
 import Rate from './rate';
-import styles from './footer.module.css';
+import styles from './styles.module.css';
 
 const Footer = () => (
   <div className={styles.wrapper}>

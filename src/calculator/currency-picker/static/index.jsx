@@ -1,5 +1,9 @@
 import Currency from '../../currency';
 
 export const StaticPicker = () => {
-  return <Currency>AUD</Currency>;
+  return (
+    <Currency type='aud' active>
+      AUD
+    </Currency>
+  );
 };

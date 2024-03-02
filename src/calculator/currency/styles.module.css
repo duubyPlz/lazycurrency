@@ -1,0 +1,26 @@
+.wrapper {
+  font-size: 25px;
+  cursor: pointer;
+  padding: 0 5px;
+}
+
+.inactive {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 50%;
+}
+
+.aud {
+  color: rgb(11, 220, 0);
+}
+
+.twd {
+  color: #0076b6;
+}
+
+.myr {
+  color: #ffd900;
+}
+
+.hkd {
+  color: rgb(236, 0, 0);
+}
