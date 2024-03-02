@@ -2,6 +2,8 @@ import Currency from '../../currency';
 import { CurrencyType } from '../../currency/types.tsx';
 import styles from './styles.module.css';
 
+// TODO Styles: mobile styles
+// TODO Styles: css transform animations
 export const DynamicPicker = () => {
   return (
     <div className={styles.wrapper}>
