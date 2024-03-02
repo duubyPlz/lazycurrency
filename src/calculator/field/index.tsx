@@ -1,6 +1,6 @@
 import styles from './styles.module.css';
 
-// TODO min 0 with state
+// TODO Logic: min 0 with state
 const Field = () => (
   <input
     type='number'

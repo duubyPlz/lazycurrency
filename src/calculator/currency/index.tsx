@@ -1,11 +1,5 @@
 import styles from './styles.module.css';
-
-// TODO enum type
-type CurrencyProps = {
-  type: string;
-  active?: boolean;
-  children: string;
-};
+import type { CurrencyProps } from './types';
 
 const Currency = ({
   type,

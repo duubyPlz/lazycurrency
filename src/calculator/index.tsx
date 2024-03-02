@@ -1,6 +1,6 @@
 import CalculatorView from './view';
 
-// TODO Fetch stuff
+// TODO Logic: Fetch stuff
 
 const Calculator = () => {
   return <CalculatorView />;
