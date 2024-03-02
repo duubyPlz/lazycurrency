@@ -1,0 +1,4 @@
+singleQuotes: true
+jsxSingleQuotes: true
+printWidth: 50
+tabWidth: 2
