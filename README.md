@@ -10,7 +10,7 @@ AUD <-> TWD/MYR/HKD (mainly for TWD) for the lazy.
 ## Setup steps
 
 - `npm install`
-- `npm dev` to start dev
+- `npm start` to start dev
 
 ## Links
 
