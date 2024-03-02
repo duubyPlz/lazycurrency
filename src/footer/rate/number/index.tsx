@@ -1,8 +1,10 @@
 import styles from './number.module.css';
 
-// TODO Install typescript
-// eslint-disable-next-line react/prop-types
-const Number = ({ children }) => {
+type NumberProps = {
+  children: string;
+};
+
+const Number = ({ children }: NumberProps) => {
   return (
     <span className={styles.number}>
       {children}

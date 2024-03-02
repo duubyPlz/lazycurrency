@@ -3,7 +3,8 @@ import Number from './number';
 
 const Rate = () => (
   <div>
-    rate <Number>1</Number>:<Number>--</Number> <Status />
+    rate <Number>1</Number>:<Number>--</Number>{' '}
+    <Status />
   </div>
 );
 
