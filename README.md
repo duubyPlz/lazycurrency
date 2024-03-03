@@ -1,6 +1,6 @@
 # lazycurrency
 
-AUD <-> TWD/MYR/HKD (mainly for TWD) for the lazy.
+AUD ↔ TWD/MYR/HKD (mainly for TWD) for the lazy.
 
 - Updates conversion rate if online (fixer.io api)
 - If offline, uses last known conversion rate
@@ -14,9 +14,10 @@ AUD <-> TWD/MYR/HKD (mainly for TWD) for the lazy.
 
 ### Stack
 
-- React, Vite, prettier, eslint (husky + lint-staged)
+- React, Vite, prettier & eslint (with husky &
+  lint-staged for precommits)
 - [CSS modules](https://vitejs.dev/guide/features.html#css-modules)
-- Sweet state
+- [Sweet state](https://atlassian.github.io/react-sweet-state/)
 - Since fixer.io is a REST api, using `fetch`
 
 ---

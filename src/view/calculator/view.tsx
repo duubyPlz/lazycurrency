@@ -2,28 +2,19 @@ import { StaticPicker } from './currency-picker';
 import { DynamicPicker } from './currency-picker/dynamic';
 import Field from './field';
 import styles from './styles.module.css';
-import type { CalculatorViewProps } from './types';
 
-const Calculator = ({
-  topAmount,
-  setTopAmount,
-  bottomAmount,
-  setBottomAmount,
-}: CalculatorViewProps) => {
+const FIELD_TOP_ID = 'top';
+const FIELD_BOTTOM_ID = 'bottom';
+
+const Calculator = () => {
   return (
     <div className={styles.calculator}>
       <div className={styles.calculatorSection}>
-        <Field
-          amount={topAmount}
-          setAmount={setTopAmount}
-        />
+        <Field id={FIELD_TOP_ID} />
         <StaticPicker />
       </div>
       <div className={styles.calculatorSection}>
-        <Field
-          amount={bottomAmount}
-          setAmount={setBottomAmount}
-        />
+        <Field id={FIELD_BOTTOM_ID} />
         <DynamicPicker />
       </div>
     </div>

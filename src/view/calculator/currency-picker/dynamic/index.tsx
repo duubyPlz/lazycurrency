@@ -1,4 +1,4 @@
-import Currency from '../../currency';
+import Currency from '../../currency/index.tsx';
 import { CurrencyType } from '../../currency/types.tsx';
 import styles from './styles.module.css';
 
