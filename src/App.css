@@ -8,8 +8,7 @@
     local('Exo-ExtraLight'),
     url('./assets/fonts/exo-v6-latin-200.eot?#iefix')
       format('embedded-opentype'),
-    /* IE6-IE8 */
-      url('./assets/fonts/exo-v6-latin-200.woff2')
+    url('./assets/fonts/exo-v6-latin-200.woff2')
       format('woff2'),
     /* Super Modern Browsers */
       url('./assets/fonts/exo-v6-latin-200.woff')
@@ -73,10 +72,4 @@ body {
   color: rgba(255, 255, 255, 0.9);
   font-weight: 200;
   overflow-x: auto;
-}
-
-@media (max-device-width: 768px) {
-  body {
-    font-size: 900%;
-  }
 }

@@ -1,11 +1,12 @@
-.wrapper {
+.calculator {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   height: 75vh;
+  transition: 1s;
 }
 
-.child {
+.calculatorSection {
   flex-grow: 0;
 }

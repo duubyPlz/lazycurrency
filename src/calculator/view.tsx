@@ -5,12 +5,12 @@ import styles from './styles.module.css';
 
 const Calculator = () => {
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.child}>
+    <div className={styles.calculator}>
+      <div className={styles.calculatorSection}>
         <Field />
         <StaticPicker />
       </div>
-      <div className={styles.child}>
+      <div className={styles.calculatorSection}>
         <Field />
         <DynamicPicker />
       </div>

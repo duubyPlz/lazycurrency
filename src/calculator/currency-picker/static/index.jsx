@@ -4,7 +4,7 @@ import styles from './styles.module.css';
 
 export const StaticPicker = () => {
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.staticPicker}>
       <Currency type={CurrencyType.AUD} active>
         AUD
       </Currency>

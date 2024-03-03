@@ -3,7 +3,7 @@ import Rate from './rate';
 import styles from './styles.module.css';
 
 const Footer = () => (
-  <div className={styles.wrapper}>
+  <div className={styles.footer}>
     <Rate />
     <DataTracker />
   </div>

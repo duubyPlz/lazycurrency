@@ -5,7 +5,7 @@
   "description": "AUD <-> TWD/MYR/HKD (mainly for TWD) for the lazy.",
   "type": "module",
   "scripts": {
-    "start": "vite",
+    "start": "vite --open",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"

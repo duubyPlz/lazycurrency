@@ -7,8 +7,8 @@ const Currency = ({
   children,
 }: CurrencyProps) => {
   const currencyStyles = active
-    ? `${styles.wrapper} ${styles[type]}`
-    : `${styles.wrapper} ${styles.inactive}`;
+    ? `${styles.currency} ${styles[type]}`
+    : `${styles.currency} ${styles.inactive}`;
 
   return (
     <span className={currencyStyles}>
