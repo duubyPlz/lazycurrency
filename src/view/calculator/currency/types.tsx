@@ -1,6 +1,7 @@
 export type CurrencyProps = {
   type: CurrencyType;
-  active?: boolean;
+  focused?: boolean;
+  isTop?: boolean;
   children: string;
 };
 

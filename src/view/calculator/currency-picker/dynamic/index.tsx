@@ -6,15 +6,11 @@ import styles from './styles.module.css';
 export const DynamicPicker = () => {
   return (
     <div className={styles.dynamicPicker}>
-      <Currency type={CurrencyType.TWD} active>
+      <Currency type={CurrencyType.TWD} focused>
         TWD
       </Currency>
-      <Currency type={CurrencyType.MYR}>
-        MYR
-      </Currency>
-      <Currency type={CurrencyType.HKD}>
-        HKD
-      </Currency>
+      <Currency type={CurrencyType.MYR}>MYR</Currency>
+      <Currency type={CurrencyType.HKD}>HKD</Currency>
     </div>
   );
 };
