@@ -8,6 +8,3 @@ export const sanitiseAmount = (input: string): number => {
   // If the input is below 0, return 0
   return parsedAmount >= 0 ? parsedAmount : 0;
 };
-
-export const convertAmount = (rate: number, amount: number) =>
-  rate * amount;

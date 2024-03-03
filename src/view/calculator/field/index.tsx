@@ -1,4 +1,4 @@
-import { convertAmount, sanitiseAmount } from '../utils';
+import { sanitiseAmount } from '../utils';
 import styles from './styles.module.css';
 import { type FieldProps } from './types';
 import { useCalculatorStore } from '../../../state/calculator';
@@ -7,7 +7,7 @@ import {
   type CalculatorActions,
   type CalculatorState,
 } from '../../../state/calculator/types';
-import { getOppositeActionById, getTargetActionById } from './utils';
+import { getCorrespondingActions } from './utils';
 import { getAmount } from '../../../state/calculator/selectors';
 
 const handleOnUserChange = (
@@ -15,14 +15,16 @@ const handleOnUserChange = (
   actions: BoundActions<CalculatorState, CalculatorActions>,
   id: string,
 ) => {
+  // Get value
   const sanitisedAmount = sanitiseAmount(event.target.value);
-  const setTargetField = getTargetActionById(actions, id);
-  setTargetField(sanitisedAmount);
 
-  const convertOppositeField = getOppositeActionById(actions, id);
+  // Get corresponding actions & logic function
+  const { targetAction, oppositeAction, convertFn } =
+    getCorrespondingActions(actions, id);
 
-  // TODO [[next]] Logic: Once defaultRates is in sweet state, use it here!
-  convertOppositeField(rate, sanitisedAmount, convertAmount);
+  // Execute sweet state actions
+  targetAction(sanitisedAmount);
+  oppositeAction(sanitisedAmount, convertFn);
 };
 
 const Field = ({ id }: FieldProps) => {

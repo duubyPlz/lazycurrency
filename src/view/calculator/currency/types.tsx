@@ -4,9 +4,10 @@ export type CurrencyProps = {
   children: string;
 };
 
+// TODO Refactor: Move into model
 export enum CurrencyType {
-  AUD = 'aud',
-  HKD = 'hkd',
-  MYR = 'myr',
-  TWD = 'twd',
+  AUD = 'AUD',
+  HKD = 'HKD',
+  MYR = 'MYR',
+  TWD = 'TWD',
 }

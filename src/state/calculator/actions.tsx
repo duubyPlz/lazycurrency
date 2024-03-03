@@ -25,18 +25,21 @@ const setBottomAmountAction: SetBottomAmountAction =
     setState({ bottomAmount: input });
   };
 
+// TODO Logic: tests
 /**
  * Should only be called by the converter
  */
 const convertTopAmountAction: ConvertTopAmountAction =
   (
-    rate: number,
     amount: number,
     convertFn: (rate: number, amount: number) => number,
   ) =>
-  ({ setState }: ActionInput) => {
+  ({ setState, getState }: ActionInput) => {
+    const rates = getState().rates;
+    const bottomCurrency: string = getState().bottomCurrency;
+
     setState({
-      topAmount: convertFn(rate, amount),
+      topAmount: convertFn(rates[bottomCurrency] ?? 0, amount),
     });
   };
 
@@ -45,13 +48,15 @@ const convertTopAmountAction: ConvertTopAmountAction =
  */
 const convertBottomAmountAction: ConvertBottomAmountAction =
   (
-    rate: number,
     amount: number,
     convertFn: (rate: number, amount: number) => number,
   ) =>
-  ({ setState }: ActionInput) => {
+  ({ setState, getState }: ActionInput) => {
+    const rates = getState().rates;
+    const bottomCurrency = getState().bottomCurrency;
+
     setState({
-      bottomAmount: convertFn(rate, amount),
+      bottomAmount: convertFn(rates[bottomCurrency] ?? 0, amount),
     });
   };
 

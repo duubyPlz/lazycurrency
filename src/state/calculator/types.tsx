@@ -1,9 +1,20 @@
 import { CurrencyType } from '../../view/calculator/currency/types';
 
+// Typescript index signatures:
+// https://dmitripavlutin.com/typescript-index-signatures/
+// ? Is this correct..
+export type RatesType = {
+  [key: string]: number;
+  TWD: number;
+  MYR: number;
+  HKD: number;
+};
+
 export type CalculatorState = {
   topAmount: number;
   bottomAmount: number;
   bottomCurrency: CurrencyType;
+  rates: RatesType;
 };
 
 export type ActionInput = {
@@ -30,7 +41,6 @@ export type SetBottomAmountAction = (
 }) => void;
 
 export type ConvertTopAmountAction = (
-  rate: number,
   amount: number,
   convertFn: (rate: number, amount: number) => number,
 ) => ({
@@ -41,7 +51,6 @@ export type ConvertTopAmountAction = (
 }) => void;
 
 export type ConvertBottomAmountAction = (
-  rate: number,
   amount: number,
   convertFn: (rate: number, amount: number) => number,
 ) => ({

@@ -6,30 +6,41 @@ import {
 } from '../../../state/calculator/types';
 
 // TODO Logic: tests
-type GetTargetActionByIdOutput = (input: number) => void;
 
-export const getTargetActionById = (
-  actions: BoundActions<CalculatorState, CalculatorActions>,
-  id: string,
-): GetTargetActionByIdOutput => {
-  const { setTopAmount, setBottomAmount } = actions;
-  const wantedAction =
-    id === FIELD_TOP_ID ? setTopAmount : setBottomAmount;
-  return wantedAction;
+type ConvertFunctionType = (rate: number, amount: number) => number;
+export const times = (rate: number, amount: number) => amount * rate;
+export const divide = (rate: number, amount: number) => amount / rate;
+
+type GetCorrespondingActionsOutput = {
+  targetAction: (input: number) => void;
+  oppositeAction: (
+    input: number,
+    convertFn: ConvertFunctionType,
+  ) => void;
+  convertFn: ConvertFunctionType;
 };
 
-type GetOppositeActionByIdOutput = (
-  rate: number,
-  amount: number,
-  convertFn: (rate: number, amount: number) => number,
-) => void;
-
-export const getOppositeActionById = (
+// TODO Logic: tests
+export const getCorrespondingActions = (
   actions: BoundActions<CalculatorState, CalculatorActions>,
   id: string,
-): GetOppositeActionByIdOutput => {
-  const { convertTopAmount, convertBottomAmount } = actions;
-  const wantedAction =
-    id === FIELD_TOP_ID ? convertBottomAmount : convertTopAmount;
-  return wantedAction;
+): GetCorrespondingActionsOutput => {
+  const {
+    setTopAmount,
+    setBottomAmount,
+    convertTopAmount,
+    convertBottomAmount,
+  } = actions;
+
+  return id === FIELD_TOP_ID
+    ? {
+        targetAction: setTopAmount,
+        oppositeAction: convertBottomAmount,
+        convertFn: times,
+      }
+    : {
+        targetAction: setBottomAmount,
+        oppositeAction: convertTopAmount,
+        convertFn: divide,
+      };
 };
