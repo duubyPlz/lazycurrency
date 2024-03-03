@@ -31,12 +31,12 @@ const setBottomAmountAction: SetBottomAmountAction =
 const convertTopAmountAction: ConvertTopAmountAction =
   (
     rate: number,
+    amount: number,
     convertFn: (rate: number, amount: number) => number,
   ) =>
-  ({ setState, getState }: ActionInput) => {
-    const oppositeAmount = getState().bottomAmount;
+  ({ setState }: ActionInput) => {
     setState({
-      topAmount: convertFn(rate, oppositeAmount),
+      topAmount: convertFn(rate, amount),
     });
   };
 
@@ -49,10 +49,9 @@ const convertBottomAmountAction: ConvertBottomAmountAction =
     amount: number,
     convertFn: (rate: number, amount: number) => number,
   ) =>
-  ({ setState, getState }: ActionInput) => {
-    const oppositeAmount = getState().topAmount;
+  ({ setState }: ActionInput) => {
     setState({
-      bottomAmount: convertFn(rate, oppositeAmount),
+      bottomAmount: convertFn(rate, amount),
     });
   };
 
