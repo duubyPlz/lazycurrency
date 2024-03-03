@@ -1,28 +1,28 @@
-import { sanitiseAmount } from '../utils';
+import { convertAmount, sanitiseAmount } from '../utils';
 import styles from './styles.module.css';
 import { type FieldProps } from './types';
 import { useCalculatorStore } from '../../../state/calculator';
 import { BoundActions } from 'react-sweet-state';
 import {
-  type CalculatorAction,
+  type CalculatorActions,
   type CalculatorState,
 } from '../../../state/calculator/types';
-import { getActionById } from './utils';
+import { getOppositeActionById, getTargetActionById } from './utils';
 import { getAmount } from '../../../state/calculator/selectors';
 
-const handleOnChange = (
+const handleOnUserChange = (
   event: React.ChangeEvent<HTMLInputElement>,
-  actions: BoundActions<
-    CalculatorState,
-    CalculatorAction
-  >,
+  actions: BoundActions<CalculatorState, CalculatorActions>,
   id: string,
 ) => {
-  const sanitised = sanitiseAmount(
-    event.target.value,
-  );
+  const sanitisedAmount = sanitiseAmount(event.target.value);
+  const setTargetField = getTargetActionById(actions, id);
+  setTargetField(sanitisedAmount);
 
-  getActionById(actions, id)(sanitised);
+  const convertOppositeField = getOppositeActionById(actions, id);
+
+  // TODO [[next]] Logic: Once defaultRates is in sweet state, use it here!
+  convertOppositeField(rate, sanitisedAmount, convertAmount);
 };
 
 const Field = ({ id }: FieldProps) => {
@@ -35,9 +35,7 @@ const Field = ({ id }: FieldProps) => {
       type='number'
       className={styles.field}
       value={getAmount(state, id)}
-      onChange={(event) =>
-        handleOnChange(event, actions, id)
-      }
+      onChange={(event) => handleOnUserChange(event, actions, id)}
     ></input>
   );
 };

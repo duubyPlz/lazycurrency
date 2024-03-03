@@ -1,7 +1,5 @@
 // TODO Logic: tests
-export const sanitiseAmount = (
-  input: string,
-): number => {
+export const sanitiseAmount = (input: string): number => {
   const parsedAmount = parseInt(input);
 
   // If the input isn't a number, return 0
@@ -10,3 +8,6 @@ export const sanitiseAmount = (
   // If the input is below 0, return 0
   return parsedAmount >= 0 ? parsedAmount : 0;
 };
+
+export const convertAmount = (rate: number, amount: number) =>
+  rate * amount;

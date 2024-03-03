@@ -6,6 +6,7 @@ export const FIELD_BOTTOM_ID = 'bottom';
 // TODO Logic: Fetch stuff
 // TODO Logic: PWA
 // TODO Logic: Hardcoded conversion
+// TODO Logic: Use convertTopAmount
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const defaultRates = {
@@ -17,6 +18,7 @@ const defaultRates = {
 const Calculator = () => {
   // const [state] = useCalculatorStore();
 
+  //TODO [[next]] Logic: Put defaultRates into sweet state
   return <CalculatorView />;
 };
 export default Calculator;
