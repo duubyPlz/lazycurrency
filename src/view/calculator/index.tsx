@@ -1,6 +1,5 @@
 // import { useCalculatorStore } from '../../state/calculator';
 import CalculatorView from './view';
-// TODO sweet state selectors
 
 export const FIELD_TOP_ID = 'top';
 export const FIELD_BOTTOM_ID = 'bottom';

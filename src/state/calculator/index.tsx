@@ -33,6 +33,7 @@ const actions = {
 const CalculatorStore = createStore({
   initialState,
   actions,
+  name: 'Calculator',
 });
 
 export const useCalculatorStore = createHook(

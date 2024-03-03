@@ -29,8 +29,6 @@ const Field = ({ id }: FieldProps) => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [state, actions] = useCalculatorStore();
 
-  console.log('NOW STATE', id, state);
-
   return (
     <input
       id={id}
