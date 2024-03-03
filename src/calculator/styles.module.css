@@ -5,6 +5,7 @@
   align-items: center;
   height: 75vh;
   transition: 1s;
+  margin: 10px;
 }
 
 .calculatorSection {
