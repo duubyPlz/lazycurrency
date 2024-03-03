@@ -5,7 +5,7 @@ import {
   CalculatorState,
 } from '../../../state/calculator/types';
 
-// TODO tests
+// TODO Logic: tests
 export const getActionById = (
   actions: BoundActions<
     CalculatorState,

@@ -1,3 +1,4 @@
+// TODO Logic: tests
 export const sanitiseAmount = (
   input: string,
 ): number => {

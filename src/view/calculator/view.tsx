@@ -4,6 +4,7 @@ import { DynamicPicker } from './currency-picker/dynamic';
 import Field from './field';
 import styles from './styles.module.css';
 
+// TODO Styles: Header bar to make gap between fields smaller
 const Calculator = () => {
   return (
     <div className={styles.calculator}>
