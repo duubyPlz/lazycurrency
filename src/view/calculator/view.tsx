@@ -1,10 +1,8 @@
+import { FIELD_BOTTOM_ID, FIELD_TOP_ID } from '.';
 import { StaticPicker } from './currency-picker';
 import { DynamicPicker } from './currency-picker/dynamic';
 import Field from './field';
 import styles from './styles.module.css';
-
-const FIELD_TOP_ID = 'top';
-const FIELD_BOTTOM_ID = 'bottom';
 
 const Calculator = () => {
   return (

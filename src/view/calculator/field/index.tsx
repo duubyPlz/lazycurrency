@@ -1,54 +1,44 @@
-import {
-  Dispatch,
-  SetStateAction,
-  useState,
-} from 'react';
 import { sanitiseAmount } from '../utils';
 import styles from './styles.module.css';
 import { type FieldProps } from './types';
-import { useFieldStore } from '../../../state/field';
+import { useCalculatorStore } from '../../../state/calculator';
+import { FIELD_TOP_ID } from '..';
 
-// TODO Logic: Continue fixing form 2-way binding
 const handleOnChange = (
   event: React.ChangeEvent<HTMLInputElement>,
   setAmount: (amount: number) => void,
-  setLocalAmount: Dispatch<
-    SetStateAction<number>
-  >,
 ) => {
-  console.log(
-    'INSIDE ON CHANGEEE!!!!',
-    event.target.value,
-  );
   const sanitised = sanitiseAmount(
     event.target.value,
   );
-  console.log('SANITISED', sanitised);
   setAmount(sanitised);
-  setLocalAmount(sanitised);
 };
 
 const Field = ({ id }: FieldProps) => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [localAmount, setLocalAmount] =
-    useState(0);
-  const [state, { setAmount }] = useFieldStore();
+  const [state, actions] = useCalculatorStore();
 
-  const { amount } = state;
+  const { topAmount, bottomAmount } = state;
+  const { setTopAmount, setBottomAmount } =
+    actions;
   console.log('NOW STATE', id, state);
 
+  const currentAmount =
+    id === FIELD_TOP_ID
+      ? topAmount
+      : bottomAmount;
+  const currentSetAmount =
+    id === FIELD_TOP_ID
+      ? setTopAmount
+      : setBottomAmount;
   return (
     <input
       id={id}
       type='number'
       className={styles.field}
-      value={amount}
+      value={currentAmount}
       onChange={(event) =>
-        handleOnChange(
-          event,
-          setAmount,
-          setLocalAmount,
-        )
+        handleOnChange(event, currentSetAmount)
       }
     ></input>
   );
