@@ -1,14 +1,7 @@
-export type CurrencyProps = {
-  type: CurrencyType;
-  focused?: boolean;
-  isTop?: boolean;
-  children: string;
-};
+import { type CurrencyType } from '../../../state/calculator/types';
 
-// TODO Refactor: Move into model
-export enum CurrencyType {
-  AUD = 'AUD',
-  HKD = 'HKD',
-  MYR = 'MYR',
-  TWD = 'TWD',
-}
+export type CurrencyProps = {
+  active?: boolean;
+  type: CurrencyType;
+  onClickHandler?: (clickedCurrency: CurrencyType) => void;
+};

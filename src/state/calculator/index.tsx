@@ -1,28 +1,110 @@
 import { createHook, createStore } from 'react-sweet-state';
-import type { CalculatorState, RatesType } from './types';
-import { CurrencyType } from '../../view/calculator/currency/types';
-import actions from './actions';
+import type {
+  ActionInput,
+  CalculatorActions,
+  CalculatorState,
+  ConvertBottomAmountAction,
+  ConvertTopAmountAction,
+  RatesType,
+  SetActiveCurrencyAction,
+  SetBottomAmountAction,
+  SetTopAmountAction,
+} from './types';
 
-// TODO Refactor: Move into model
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const defaultRates: RatesType = {
-  TWD: 23.5,
-  MYR: 3.15,
-  HKD: 6,
+import { CurrencyType } from './types';
+
+// Actions
+/**
+ * Should only be called by the user
+ */
+export const setTopAmountAction: SetTopAmountAction =
+  (input: number) =>
+  ({ setState }: ActionInput) => {
+    setState({ topAmount: input });
+  };
+
+/**
+ * Should only be called by the user
+ */
+export const setBottomAmountAction: SetBottomAmountAction =
+  (input: number) =>
+  ({ setState }: ActionInput) => {
+    setState({ bottomAmount: input });
+  };
+
+// TODO Logic: tests
+/**
+ * Should only be called by the converter
+ */
+export const convertTopAmountAction: ConvertTopAmountAction =
+  (
+    amount: number,
+    convertFn: (rate: number, amount: number) => number,
+  ) =>
+  ({ setState, getState }: ActionInput) => {
+    const rates = getState().rates;
+    const activeCurrency = getState().activeCurrency;
+
+    setState({
+      topAmount: convertFn(rates[activeCurrency] ?? 0, amount),
+    });
+  };
+
+/**
+ * Should only be called by the converter
+ */
+export const convertBottomAmountAction: ConvertBottomAmountAction =
+  (
+    amount: number,
+    convertFn: (rate: number, amount: number) => number,
+  ) =>
+  ({ setState, getState }: ActionInput) => {
+    const rates = getState().rates;
+    const activeCurrency = getState().activeCurrency;
+
+    setState({
+      bottomAmount: convertFn(rates[activeCurrency] ?? 0, amount),
+    });
+  };
+
+export const setActiveCurrencyAction: SetActiveCurrencyAction =
+  (currencyType: CurrencyType) =>
+  ({ setState }: ActionInput) => {
+    setState({ activeCurrency: currencyType });
+  };
+
+const actions: CalculatorActions = {
+  setTopAmount: setTopAmountAction,
+  setBottomAmount: setBottomAmountAction,
+  convertTopAmount: convertTopAmountAction,
+  convertBottomAmount: convertBottomAmountAction,
+  setActiveCurrency: setActiveCurrencyAction,
 };
 
-// Sweet state
+// Initial state & creating store
+// TODO Refactor: Move into model
+const defaultRates: RatesType = {
+  [CurrencyType.TWD]: 23.5,
+  [CurrencyType.MYR]: 3.15,
+  [CurrencyType.HKD]: 6,
+};
+
 const initialState: CalculatorState = {
   topAmount: 0,
   bottomAmount: 0,
-  bottomCurrency: CurrencyType.TWD,
+  activeCurrency: CurrencyType.TWD,
   rates: defaultRates,
 };
 
-const CalculatorStore = createStore({
+export const CalculatorStore = createStore({
   initialState,
   actions,
   name: 'Calculator',
 });
 
-export const useCalculatorStore = createHook(CalculatorStore);
+// Hooks
+export const useCalculatorStore = createHook(CalculatorStore); // TODO Refactor: Move into model
+
+export const useCalculatorActions = createHook(CalculatorStore, {
+  selector: null,
+});

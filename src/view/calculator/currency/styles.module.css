@@ -1,7 +1,9 @@
 .currency {
   font-size: 25px;
+  /* TODO Styles: static cursor not pointer */
   cursor: pointer;
   padding: 0 6px;
+  user-select: none;
 }
 
 .inactive {
