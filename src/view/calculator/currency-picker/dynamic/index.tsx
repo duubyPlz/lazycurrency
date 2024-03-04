@@ -15,7 +15,7 @@ const handleClick = (
   setActiveCurrency: (currencyType: CurrencyType) => void,
 ) => setActiveCurrency(clickedCurrency);
 
-// TODO Logic: css transform animations in `updateCurrencyDisplay`
+// TODO [[next]] Logic: css transform animations in `updateCurrencyDisplay`
 export const DynamicPicker = () => {
   const activeCurrency = useActiveCurrency()[0];
   const [, { setActiveCurrency }] = useCalculatorActions();
