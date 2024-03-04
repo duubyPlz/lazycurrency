@@ -67,6 +67,7 @@ export const convertBottomAmountAction: ConvertBottomAmountAction =
     });
   };
 
+// TODO Logic: Also store in local storage
 export const setActiveCurrencyAction: SetActiveCurrencyAction =
   (currencyType: CurrencyType) =>
   ({ setState }: ActionInput) => {
