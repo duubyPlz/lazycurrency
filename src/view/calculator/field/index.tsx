@@ -22,7 +22,7 @@ const handleOnUserChange = (
   const { targetAction, oppositeAction, convertFn } =
     getCorrespondingActions(actions, id);
 
-  // Execute sweet state actions
+  // Execute sweet state actions on both fields
   targetAction(sanitisedAmount);
   oppositeAction(sanitisedAmount, convertFn);
 };

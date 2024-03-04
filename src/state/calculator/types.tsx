@@ -20,7 +20,7 @@ export type CalculatorState = {
   rates: RatesType;
 };
 
-// ! Want to simplify (& ActionOutput) but not sure how
+// ! Type: Want to simplify (& ActionOutput) but not sure how
 export type ActionInput = {
   setState: (partialState: Partial<CalculatorState>) => void;
   getState: () => CalculatorState;

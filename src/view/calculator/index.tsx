@@ -5,7 +5,6 @@ export const FIELD_TOP_ID = 'top';
 export const FIELD_BOTTOM_ID = 'bottom';
 // TODO Logic: Fetch stuff
 // TODO Logic: PWA
-// TODO Logic: Hardcoded conversion
 
 const Calculator = () => {
   // const [state] = useCalculatorStore();

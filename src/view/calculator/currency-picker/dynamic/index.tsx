@@ -1,7 +1,7 @@
 import { useCalculatorActions } from '../../../../state/calculator';
 import { useActiveCurrency } from '../../../../state/calculator/selectors.tsx';
 import {
-  // ! Not using this as a type, but actually as values
+  // Not using this as a type, but actually as values
   CurrencyType,
 } from '../../../../state/calculator/types.tsx';
 import Currency from '../../currency/index.tsx';
@@ -11,7 +11,7 @@ import { getBottomCurrencies } from './utils.tsx';
 
 const handleClick = (
   clickedCurrency: CurrencyType,
-  // ! Couldn't reconcile this type with SetActiveCurrencyAction
+  // ! Type: Couldn't reconcile this type with SetActiveCurrencyAction
   setActiveCurrency: (currencyType: CurrencyType) => void,
 ) => setActiveCurrency(clickedCurrency);
 
