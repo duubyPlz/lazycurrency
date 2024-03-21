@@ -1,6 +1,5 @@
 import { ReactNode } from 'react';
-
-import styles from './styles.module.css';
+import { Wrapper } from './styled';
 
 type ShifterProps = {
   children: ReactNode;
@@ -8,7 +7,7 @@ type ShifterProps = {
 
 // TODO [[next]] Logic: css transform animations in `updateCurrencyDisplay`
 const Shifter = ({ children }: ShifterProps) => (
-  <div className={styles.shifter}>{children}</div>
+  <Wrapper>{children}</Wrapper>
 );
 
 export default Shifter;
