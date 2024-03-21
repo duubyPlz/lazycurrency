@@ -7,4 +7,5 @@ export const Wrapper = styled.div({
   justifyContent: 'center',
   alignItems: 'center',
   alignContent: 'center',
+  gap: '0.8em',
 });
