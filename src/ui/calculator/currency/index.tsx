@@ -1,24 +1,20 @@
-import styles from './styles.module.css';
+import { CurrencySpan } from './styled';
 import type { CurrencyProps } from './types';
 
 const Currency = ({
   type,
-  active = false,
+  isActive = false,
+  isStatic = false,
   onClickHandler = undefined,
-}: CurrencyProps) => {
-  const currencyStyles = active
-    ? `${styles.currency} ${styles[type]}`
-    : `${styles.currency} ${styles.inactive}`;
-
-  return (
-    <span
-      id={type}
-      className={currencyStyles}
-      onClick={() => onClickHandler?.(type)}
-    >
-      {type}
-    </span>
-  );
-};
+}: CurrencyProps) => (
+  <CurrencySpan
+    type={type}
+    isActive={isActive}
+    isStatic={isStatic}
+    onClick={() => onClickHandler?.(type)}
+  >
+    {type}
+  </CurrencySpan>
+);
 
 export default Currency;

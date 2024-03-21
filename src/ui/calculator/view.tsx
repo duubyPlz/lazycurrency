@@ -2,11 +2,11 @@ import { FIELD_BOTTOM_ID, FIELD_TOP_ID } from '.';
 import { StaticPicker } from './currency-picker';
 import { DynamicPicker } from './currency-picker/dynamic';
 import Field from './field';
-import { CalculatorSection, Container } from './styled';
+import { CalculatorSection, Wrapper } from './styled';
 
 const Calculator = () => {
   return (
-    <Container>
+    <Wrapper>
       <CalculatorSection>
         <Field id={FIELD_TOP_ID} />
         <StaticPicker />
@@ -15,7 +15,7 @@ const Calculator = () => {
         <Field id={FIELD_BOTTOM_ID} />
         <DynamicPicker />
       </CalculatorSection>
-    </Container>
+    </Wrapper>
   );
 };
 

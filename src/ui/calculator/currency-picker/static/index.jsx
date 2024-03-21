@@ -6,7 +6,11 @@ export const StaticPicker = () => {
   return (
     <div className={styles.staticPicker}>
       {/* StaticPicker hard-codes this currency to always active */}
-      <Currency type={CurrencyType.AUD} active>
+      <Currency
+        type={CurrencyType.AUD}
+        isActive={true}
+        isStatic={true}
+      >
         AUD
       </Currency>
     </div>

@@ -1,6 +1,6 @@
 import { styled } from '@compiled/react';
 
-export const Container = styled.div({
+export const Wrapper = styled.div({
   height: 'min-content',
   display: 'flex',
   flexDirection: 'column',

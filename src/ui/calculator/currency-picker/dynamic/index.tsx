@@ -28,7 +28,7 @@ export const DynamicPicker = () => {
             <Currency
               key={currencyType}
               type={currencyType}
-              active={currencyType === activeCurrency}
+              isActive={currencyType === activeCurrency}
               onClickHandler={(clickedCurrency) =>
                 handleClick(clickedCurrency, setActiveCurrency)
               }

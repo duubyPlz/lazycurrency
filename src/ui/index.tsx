@@ -1,15 +1,15 @@
 import Calculator from './calculator';
 import Footer from './footer';
 import Header from './header';
-import { Container } from './styled';
+import { Wrapper } from './styled';
 
 const LazyCurrency = () => {
   return (
-    <Container>
+    <Wrapper>
       <Header />
       <Calculator />
       <Footer />
-    </Container>
+    </Wrapper>
   );
 };
 
