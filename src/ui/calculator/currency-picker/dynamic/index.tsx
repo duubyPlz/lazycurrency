@@ -6,8 +6,8 @@ import {
 } from '../../../../state/calculator/types.tsx';
 import Currency from '../../currency/index.tsx';
 import Shifter from './shifter/index.tsx';
+import { Wrapper } from './styled.tsx';
 
-import styles from './styles.module.css';
 import { getBottomCurrencies } from './utils.tsx';
 
 const handleClick = (
@@ -21,7 +21,7 @@ export const DynamicPicker = () => {
   const [, { setActiveCurrency }] = useCalculatorActions();
 
   return (
-    <div className={styles.dynamicPicker}>
+    <Wrapper>
       <Shifter>
         {getBottomCurrencies().map((currencyType) => {
           return (
@@ -36,6 +36,6 @@ export const DynamicPicker = () => {
           );
         })}
       </Shifter>
-    </div>
+    </Wrapper>
   );
 };
