@@ -1,3 +1,5 @@
+import { styled } from '@compiled/react';
+
 import Calculator from './calculator';
 import Footer from './footer';
 import Header from './header';
@@ -9,8 +11,18 @@ const LazyCurrency = () => {
       <Header />
       <Calculator />
       <Footer />
+      <Container>compiled test</Container>
     </div>
   );
 };
+
+const Container = styled.div({
+  height: '100vh',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+  alignContent: 'center',
+});
 
 export default LazyCurrency;

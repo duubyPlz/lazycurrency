@@ -16,7 +16,9 @@ AUD ↔ TWD/MYR/HKD (mainly for TWD) for the lazy.
 
 - React, Vite, prettier & eslint (with husky &
   lint-staged for precommits)
-- [CSS modules](https://vitejs.dev/guide/features.html#css-modules)
+- [Compiled CSS-in-JS](https://compiledcssinjs.com)
+  - Have to also install `@babel/plugin-transform-react-jsx` to fix
+    `jsxDEV` not defined error
 - [Sweet state](https://atlassian.github.io/react-sweet-state/)
 - Since fixer.io is a REST api, using `fetch`
 
@@ -25,3 +27,4 @@ AUD ↔ TWD/MYR/HKD (mainly for TWD) for the lazy.
 ## Links
 
 - Precommit lint-staged docs: <https://github.com/lint-staged/lint-staged?tab=readme-ov-file#configuration>
+- Vite & compiled <https://github.com/atlassian-labs/compiled/issues/1237>
