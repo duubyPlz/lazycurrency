@@ -6,8 +6,6 @@ type ShifterProps = {
   children: ReactNode;
 };
 
-// TODO [[next]] Logic: css transform animations in `updateCurrencyDisplay`
-
 const Shifter = ({ children }: ShifterProps) => {
   const elementWidth = useShiftWidth()[0];
 

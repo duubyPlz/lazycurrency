@@ -28,11 +28,13 @@ export const CurrencySpan = styled.span<{
   isActive: boolean;
   isStatic: boolean;
 }>({
-  /* TODO Styles: static cursor not pointer */
   cursor: (props) => (props.isStatic ? 'default' : 'pointer'),
   padding: '0 0.23em',
   userSelect: 'none',
   fontSize: (props) => (props.isActive ? '25px' : '20px'),
   color: (props) =>
     getCurrencyActiveColor(props.type, props.isActive),
+  '@media (max-width: 768px)': {
+    fontSize: '20px',
+  },
 });
