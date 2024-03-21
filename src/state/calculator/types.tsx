@@ -3,6 +3,7 @@ export enum CurrencyType {
   HKD = 'HKD',
   MYR = 'MYR',
   TWD = 'TWD',
+  THB = 'THB',
 }
 
 // Typescript index signatures:

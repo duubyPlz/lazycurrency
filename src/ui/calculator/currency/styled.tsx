@@ -18,6 +18,8 @@ const getCurrencyActiveColor = (
       return '#ffd900';
     case CurrencyType.TWD:
       return '#0076b6';
+    case CurrencyType.THB:
+      return '#AA00E0';
     default:
       return defaultColor;
   }

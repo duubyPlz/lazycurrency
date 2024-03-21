@@ -94,15 +94,16 @@ const actions: CalculatorActions = {
 // Initial state & creating store
 // TODO Refactor: Move into model
 const defaultRates: RatesType = {
-  [CurrencyType.TWD]: 23.5,
-  [CurrencyType.MYR]: 3.15,
-  [CurrencyType.HKD]: 6,
+  [CurrencyType.TWD]: 20.97,
+  [CurrencyType.MYR]: 3.1,
+  [CurrencyType.HKD]: 5.14,
+  [CurrencyType.THB]: 23.82,
 };
 
 const initialState: CalculatorState = {
   topAmount: 0,
   bottomAmount: 0,
-  activeCurrency: CurrencyType.TWD,
+  activeCurrency: CurrencyType.THB,
   shiftWidth: 0,
   rates: defaultRates,
 };
