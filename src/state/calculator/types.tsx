@@ -17,10 +17,11 @@ export type CalculatorState = {
   topAmount: number;
   bottomAmount: number;
   activeCurrency: CurrencyType;
+  shiftWidth: number;
   rates: RatesType;
 };
 
-// ! Type: Want to simplify (& ActionOutput) but not sure how
+// ? Type: Want to simplify (& ActionOutput) but not sure how
 export type ActionInput = {
   setState: (partialState: Partial<CalculatorState>) => void;
   getState: () => CalculatorState;
@@ -51,10 +52,13 @@ export type SetActiveCurrencyAction = (
   currencyType: CurrencyType,
 ) => ActionOutput;
 
+export type SetShiftWidthAction = (width: number) => ActionOutput;
+
 export type CalculatorActions = {
   setTopAmount: SetTopAmountAction;
   setBottomAmount: SetBottomAmountAction;
   convertTopAmount: ConvertTopAmountAction;
   convertBottomAmount: ConvertBottomAmountAction;
   setActiveCurrency: SetActiveCurrencyAction;
+  setShiftWidth: SetShiftWidthAction;
 };
