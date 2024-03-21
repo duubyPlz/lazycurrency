@@ -2,20 +2,20 @@ import { FIELD_BOTTOM_ID, FIELD_TOP_ID } from '.';
 import { StaticPicker } from './currency-picker';
 import { DynamicPicker } from './currency-picker/dynamic';
 import Field from './field';
-import styles from './styles.module.css';
+import { CalculatorSection, Container } from './styled';
 
 const Calculator = () => {
   return (
-    <div className={styles.calculator}>
-      <div className={styles.calculatorSection}>
+    <Container>
+      <CalculatorSection>
         <Field id={FIELD_TOP_ID} />
         <StaticPicker />
-      </div>
-      <div className={styles.calculatorSection}>
+      </CalculatorSection>
+      <CalculatorSection>
         <Field id={FIELD_BOTTOM_ID} />
         <DynamicPicker />
-      </div>
-    </div>
+      </CalculatorSection>
+    </Container>
   );
 };
 
