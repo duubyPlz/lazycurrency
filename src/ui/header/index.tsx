@@ -1,3 +1,5 @@
-const Header = () => <div></div>;
+import { Wrapper } from './styled';
+
+const Header = () => <Wrapper />;
 
 export default Header;

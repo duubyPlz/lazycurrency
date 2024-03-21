@@ -8,4 +8,7 @@ export const Wrapper = styled.div({
   alignItems: 'center',
   alignContent: 'center',
   gap: '0.8em',
+  '@media (max-width: 768px)': {
+    justifyContent: 'flex-start',
+  },
 });
