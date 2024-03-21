@@ -14,6 +14,7 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
+    'no-console': 'error',
     '@compiled/jsx-pragma': 'error',
     '@compiled/no-emotion-css': 'warn',
   },
