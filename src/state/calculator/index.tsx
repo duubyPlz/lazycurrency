@@ -7,6 +7,7 @@ import type {
   ConvertTopAmountAction,
   RatesType,
   SetActiveCurrencyAction,
+  SetShiftWidthAction,
   SetBottomAmountAction,
   SetTopAmountAction,
 } from './types';
@@ -74,12 +75,20 @@ export const setActiveCurrencyAction: SetActiveCurrencyAction =
     setState({ activeCurrency: currencyType });
   };
 
+// TODO Logic: Also store in local storage
+export const setShiftWidthAction: SetShiftWidthAction =
+  (width: number) =>
+  ({ setState }: ActionInput) => {
+    setState({ shiftWidth: width });
+  };
+
 const actions: CalculatorActions = {
   setTopAmount: setTopAmountAction,
   setBottomAmount: setBottomAmountAction,
   convertTopAmount: convertTopAmountAction,
   convertBottomAmount: convertBottomAmountAction,
   setActiveCurrency: setActiveCurrencyAction,
+  setShiftWidth: setShiftWidthAction,
 };
 
 // Initial state & creating store
@@ -94,6 +103,7 @@ const initialState: CalculatorState = {
   topAmount: 0,
   bottomAmount: 0,
   activeCurrency: CurrencyType.TWD,
+  shiftWidth: 0,
   rates: defaultRates,
 };
 

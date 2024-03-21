@@ -14,15 +14,19 @@ export const getAmount = (state: CalculatorState, id: string) => {
   return id === FIELD_TOP_ID ? topAmount : bottomAmount;
 };
 
-export const getRates = (state: CalculatorState): RatesType =>
-  state.rates;
+const getRates = (state: CalculatorState): RatesType => state.rates;
 export const useRates = createHook(CalculatorStore, {
   selector: getRates,
 });
 
-export const getActiveCurrency = (
-  state: CalculatorState,
-): CurrencyType => state.activeCurrency;
+const getActiveCurrency = (state: CalculatorState): CurrencyType =>
+  state.activeCurrency;
 export const useActiveCurrency = createHook(CalculatorStore, {
   selector: getActiveCurrency,
+});
+
+const getShiftWidth = (state: CalculatorState): number =>
+  state.shiftWidth;
+export const useShiftWidth = createHook(CalculatorStore, {
+  selector: getShiftWidth,
 });

@@ -28,3 +28,4 @@ AUD ↔ TWD/MYR/HKD (mainly for TWD) for the lazy.
 
 - Precommit lint-staged docs: <https://github.com/lint-staged/lint-staged?tab=readme-ov-file#configuration>
 - Vite & compiled <https://github.com/atlassian-labs/compiled/issues/1237>
+- `Shifter` and width, using `offsetWidth` <https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetWidth>
