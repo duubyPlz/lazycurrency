@@ -1,5 +1,6 @@
 {
   "name": "lazycurrency",
+  "homepage": "http://duubyplz.github.io/lazycurrency",
   "private": true,
   "version": "0.0.0",
   "description": "AUD <-> TWD/MYR/HKD (mainly for TWD) for the lazy.",
@@ -8,7 +9,9 @@
     "start": "vite --open",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "lint-staged": {
     "*.{js,jsx,tsx}": [
@@ -34,6 +37,7 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
+    "gh-pages": "^6.1.1",
     "prettier": "^2.8.8",
     "vite": "^5.1.4"
   }
