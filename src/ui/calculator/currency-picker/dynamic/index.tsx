@@ -5,6 +5,7 @@ import {
   CurrencyType,
 } from '../../../../state/calculator/types.tsx';
 import Currency from '../../currency/index.tsx';
+import Shifter from './shifter/index.tsx';
 
 import styles from './styles.module.css';
 import { getBottomCurrencies } from './utils.tsx';
@@ -15,25 +16,26 @@ const handleClick = (
   setActiveCurrency: (currencyType: CurrencyType) => void,
 ) => setActiveCurrency(clickedCurrency);
 
-// TODO [[next]] Logic: css transform animations in `updateCurrencyDisplay`
 export const DynamicPicker = () => {
   const activeCurrency = useActiveCurrency()[0];
   const [, { setActiveCurrency }] = useCalculatorActions();
 
   return (
     <div className={styles.dynamicPicker}>
-      {getBottomCurrencies().map((currencyType) => {
-        return (
-          <Currency
-            key={currencyType}
-            type={currencyType}
-            active={currencyType === activeCurrency}
-            onClickHandler={(clickedCurrency) =>
-              handleClick(clickedCurrency, setActiveCurrency)
-            }
-          />
-        );
-      })}
+      <Shifter>
+        {getBottomCurrencies().map((currencyType) => {
+          return (
+            <Currency
+              key={currencyType}
+              type={currencyType}
+              active={currencyType === activeCurrency}
+              onClickHandler={(clickedCurrency) =>
+                handleClick(clickedCurrency, setActiveCurrency)
+              }
+            />
+          );
+        })}
+      </Shifter>
     </div>
   );
 };

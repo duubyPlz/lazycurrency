@@ -12,4 +12,5 @@ const LazyCurrency = () => {
     </div>
   );
 };
+
 export default LazyCurrency;
