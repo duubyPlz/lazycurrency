@@ -1,14 +1,12 @@
 import Currency from '../../currency';
-import styles from './styles.module.css';
 import { CurrencyType } from '../../../../state/calculator/types';
+import { Wrapper } from './styled';
 
 export const StaticPicker = () => {
   return (
-    <div className={styles.staticPicker}>
+    <Wrapper>
       {/* StaticPicker hard-codes this currency to always active */}
-      <Currency type={CurrencyType.AUD} active>
-        AUD
-      </Currency>
-    </div>
+      <Currency type={CurrencyType.AUD} isActive isStatic />
+    </Wrapper>
   );
 };

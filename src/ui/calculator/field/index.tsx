@@ -1,5 +1,4 @@
 import { sanitiseAmount } from '../utils';
-import styles from './styles.module.css';
 import { type FieldProps } from './types';
 import { useCalculatorStore } from '../../../state/calculator';
 import { BoundActions } from 'react-sweet-state';
@@ -9,6 +8,7 @@ import {
 } from '../../../state/calculator/types';
 import { getCorrespondingActions } from './utils';
 import { getAmount } from '../../../state/calculator/selectors';
+import { FieldInput } from './styled';
 
 const handleOnUserChange = (
   event: React.ChangeEvent<HTMLInputElement>,
@@ -28,17 +28,17 @@ const handleOnUserChange = (
 };
 
 const Field = ({ id }: FieldProps) => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [state, actions] = useCalculatorStore();
 
   return (
-    <input
+    <FieldInput
       id={id}
       type='number'
-      className={styles.field}
       value={getAmount(state, id)}
-      onChange={(event) => handleOnUserChange(event, actions, id)}
-    ></input>
+      onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+        handleOnUserChange(event, actions, id)
+      }
+    />
   );
 };
 

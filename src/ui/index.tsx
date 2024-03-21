@@ -1,15 +1,15 @@
 import Calculator from './calculator';
 import Footer from './footer';
 import Header from './header';
-import styles from './styles.module.css';
+import { Wrapper } from './styled';
 
 const LazyCurrency = () => {
   return (
-    <div className={styles.lazyCurrency}>
+    <Wrapper>
       <Header />
       <Calculator />
       <Footer />
-    </div>
+    </Wrapper>
   );
 };
 

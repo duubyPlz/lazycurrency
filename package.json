@@ -17,11 +17,15 @@
     "*.{js,jsx,ts,tsx,md,html,css}": "prettier --write"
   },
   "dependencies": {
+    "@compiled/react": "^0.17.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-sweet-state": "^2.7.1"
   },
   "devDependencies": {
+    "@babel/plugin-transform-react-jsx": "^7.23.4",
+    "@compiled/babel-plugin": "^0.28.4",
+    "@compiled/eslint-plugin": "^0.13.6",
     "@types/react": "^18.2.56",
     "@types/react-dom": "^18.2.19",
     "@typescript-eslint/eslint-plugin": "^7.1.0",

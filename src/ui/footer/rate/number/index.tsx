@@ -1,11 +1,11 @@
-import styles from './styles.module.css';
+import { Wrapper } from './styled';
 
 type NumberProps = {
   children: string;
 };
 
 const Number = ({ children }: NumberProps) => {
-  return <span className={styles.number}>{children}</span>;
+  return <Wrapper>{children}</Wrapper>;
 };
 
 export default Number;

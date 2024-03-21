@@ -1,9 +1,9 @@
-import styles from './styles.module.css';
+import { Wrapper } from './styled';
 
 const DataTracker = () => (
-  <div className={styles.dataTracker}>
+  <Wrapper>
     data from <b>hardcoded ●︿●</b>
-  </div>
+  </Wrapper>
 );
 
 export default DataTracker;
