@@ -2,5 +2,7 @@ import { styled } from '@compiled/react';
 
 export const Wrapper = styled.div({
   textAlign: 'right',
-  lineHeight: 0.7,
+  '@media (max-width: 768px)': {
+    lineHeight: 0.7,
+  },
 });
