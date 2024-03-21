@@ -5,11 +5,16 @@
   font-weight: 200;
   src: url('../fonts/exo-v6-latin-200.eot'); /* IE9 Compat Modes */
   src: local('Exo ExtraLight'), local('Exo-ExtraLight'),
-       url('../fonts/exo-v6-latin-200.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/exo-v6-latin-200.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/exo-v6-latin-200.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/exo-v6-latin-200.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/exo-v6-latin-200.svg#Exo') format('svg'); /* Legacy iOS */
+    url('../fonts/exo-v6-latin-200.eot?#iefix')
+      format('embedded-opentype'),
+    /* IE6-IE8 */ url('../fonts/exo-v6-latin-200.woff2')
+      format('woff2'),
+    /* Super Modern Browsers */ url('../fonts/exo-v6-latin-200.woff')
+      format('woff'),
+    /* Modern Browsers */ url('../fonts/exo-v6-latin-200.ttf')
+      format('truetype'),
+    /* Safari, Android, iOS */
+      url('../fonts/exo-v6-latin-200.svg#Exo') format('svg'); /* Legacy iOS */
 }
 /* exo-regular - latin */
 @font-face {
@@ -18,11 +23,16 @@
   font-weight: 400;
   src: url('../fonts/exo-v6-latin-regular.eot'); /* IE9 Compat Modes */
   src: local('Exo Regular'), local('Exo-Regular'),
-       url('../fonts/exo-v6-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/exo-v6-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/exo-v6-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/exo-v6-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/exo-v6-latin-regular.svg#Exo') format('svg'); /* Legacy iOS */
+    url('../fonts/exo-v6-latin-regular.eot?#iefix')
+      format('embedded-opentype'),
+    /* IE6-IE8 */ url('../fonts/exo-v6-latin-regular.woff2')
+      format('woff2'),
+    /* Super Modern Browsers */
+      url('../fonts/exo-v6-latin-regular.woff') format('woff'),
+    /* Modern Browsers */ url('../fonts/exo-v6-latin-regular.ttf')
+      format('truetype'),
+    /* Safari, Android, iOS */
+      url('../fonts/exo-v6-latin-regular.svg#Exo') format('svg'); /* Legacy iOS */
 }
 /* exo-700 - latin */
 @font-face {
@@ -31,11 +41,16 @@
   font-weight: 700;
   src: url('../fonts/exo-v6-latin-700.eot'); /* IE9 Compat Modes */
   src: local('Exo Bold'), local('Exo-Bold'),
-       url('../fonts/exo-v6-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/exo-v6-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/exo-v6-latin-700.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/exo-v6-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/exo-v6-latin-700.svg#Exo') format('svg'); /* Legacy iOS */
+    url('../fonts/exo-v6-latin-700.eot?#iefix')
+      format('embedded-opentype'),
+    /* IE6-IE8 */ url('../fonts/exo-v6-latin-700.woff2')
+      format('woff2'),
+    /* Super Modern Browsers */ url('../fonts/exo-v6-latin-700.woff')
+      format('woff'),
+    /* Modern Browsers */ url('../fonts/exo-v6-latin-700.ttf')
+      format('truetype'),
+    /* Safari, Android, iOS */
+      url('../fonts/exo-v6-latin-700.svg#Exo') format('svg'); /* Legacy iOS */
 }
 
 body {
@@ -99,11 +114,11 @@ body {
 }
 
 #TWD.active {
-  color: #0076B6;
+  color: #0076b6;
 }
 
 #MYR.active {
-  color: #FFD900;
+  color: #ffd900;
 }
 
 #HKD.active {
@@ -132,7 +147,7 @@ body {
 }
 
 #status {
- cursor: default;
+  cursor: default;
 }
 
 footer {
@@ -144,8 +159,7 @@ time {
   font-weight: 700;
 }
 
-@media screen and (max-device-width: 768px)
-              and (orientation: portrait) {
+@media screen and (max-device-width: 768px) and (orientation: portrait) {
   body {
     font-size: 900%;
   }

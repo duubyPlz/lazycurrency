@@ -1,0 +1,12 @@
+.lazyCurrency {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.module {
+  flex-grow: 1;
+}

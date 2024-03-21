@@ -32,7 +32,7 @@ export const setBottomAmountAction: SetBottomAmountAction =
     setState({ bottomAmount: input });
   };
 
-// TODO Logic: tests
+// TODO Tests
 /**
  * Should only be called by the converter
  */

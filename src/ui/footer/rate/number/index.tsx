@@ -5,11 +5,7 @@ type NumberProps = {
 };
 
 const Number = ({ children }: NumberProps) => {
-  return (
-    <span className={styles.number}>
-      {children}
-    </span>
-  );
+  return <span className={styles.number}>{children}</span>;
 };
 
 export default Number;

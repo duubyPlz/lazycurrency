@@ -1,5 +1,5 @@
 import { createHook } from 'react-sweet-state';
-import { FIELD_TOP_ID } from '../../view/calculator';
+import { FIELD_TOP_ID } from '../../ui/calculator';
 import {
   type CalculatorState,
   type CurrencyType,
@@ -7,7 +7,7 @@ import {
 } from './types';
 import { CalculatorStore } from '.';
 
-// TODO Logic: tests
+// TODO Tests
 export const getAmount = (state: CalculatorState, id: string) => {
   const { topAmount, bottomAmount } = state;
 

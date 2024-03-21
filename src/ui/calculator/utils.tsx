@@ -1,4 +1,4 @@
-// TODO Logic: tests
+// TODO Tests
 export const sanitiseAmount = (input: string): number => {
   const parsedAmount = parseInt(input);
 

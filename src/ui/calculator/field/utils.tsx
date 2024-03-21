@@ -5,7 +5,7 @@ import {
   CalculatorState,
 } from '../../../state/calculator/types';
 
-// TODO Logic: tests
+// TODO Tests
 
 type ConvertFunctionType = (rate: number, amount: number) => number;
 export const times = (rate: number, amount: number) => amount * rate;
@@ -20,7 +20,7 @@ type GetCorrespondingActionsOutput = {
   convertFn: ConvertFunctionType;
 };
 
-// TODO Logic: tests
+// TODO Tests
 export const getCorrespondingActions = (
   actions: BoundActions<CalculatorState, CalculatorActions>,
   id: string,
