@@ -14,21 +14,33 @@ import {
   calculateShiftWidth,
 } from './utils.tsx';
 
-const handleClick = (
+const handleCurrencyChange = (
   clickedCurrency: CurrencyType,
   // ? Type: Couldn't reconcile this type with SetActiveCurrencyAction
   setActiveCurrency: (currencyType: CurrencyType) => void,
   setShiftWidth: (width: number) => void,
+  // TODO Types: Fix types
+  setTopAmount,
+  setBottomAmount,
   ref: RefObject<HTMLSpanElement>,
 ) => {
   setActiveCurrency(clickedCurrency);
   setShiftWidth(calculateShiftWidth(ref));
+  setTopAmount(0);
+  setBottomAmount(0);
 };
 
 export const DynamicPicker = () => {
   const activeCurrency = useActiveCurrency()[0];
-  const [, { setActiveCurrency, setShiftWidth }] =
-    useCalculatorActions();
+  const [
+    ,
+    {
+      setActiveCurrency,
+      setShiftWidth,
+      setTopAmount,
+      setBottomAmount,
+    },
+  ] = useCalculatorActions();
 
   return (
     <Wrapper>
@@ -40,10 +52,12 @@ export const DynamicPicker = () => {
               type={currencyType}
               isActive={currencyType === activeCurrency}
               onClickHandler={(clickedCurrency, currentRef) =>
-                handleClick(
+                handleCurrencyChange(
                   clickedCurrency,
                   setActiveCurrency,
                   setShiftWidth,
+                  setTopAmount,
+                  setBottomAmount,
                   currentRef,
                 )
               }
