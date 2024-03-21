@@ -5,17 +5,18 @@ import {
   useRates,
 } from '../../../state/calculator/selectors';
 
-// TODO Logic: Pull rate from sweet state
 const Rate = () => {
   const rates = useRates()[0];
   const activeCurrency = useActiveCurrency()[0];
 
   const currentRate = rates[activeCurrency]?.toString() ?? '--';
+  // TODO Logic: Set status to green if API
+  const status = 'red';
 
   return (
     <div>
       rate <Number>1</Number>:<Number>{currentRate}</Number>{' '}
-      <Status />
+      <Status status={status} />
     </div>
   );
 };
