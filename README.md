@@ -28,9 +28,11 @@ AUD ↔ TWD/MYR/HKD (mainly for TWD) for the lazy.
 
 - Precommit lint-staged docs: <https://github.com/lint-staged/lint-staged?tab=readme-ov-file#configuration>
   - // TODO Lint: Fix precommit hooks to not allow `console.log` when committing
-- Vite & compiled <https://github.com/atlassian-labs/compiled/issues/1237>
-- `Shifter` and width, using `offsetWidth` <https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetWidth>
+- Vite & Compiled <https://github.com/atlassian-labs/compiled/issues/1237>
+- Our `Shifter` component and using `offsetWidth` <https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetWidth>
 - Vite to Github Pages <https://dev.to/tharakamts/how-to-deploy-your-react-or-vite-project-on-github-pages-using-gh-pages-d7f>
 - PWA:
+  - <https://blog.logrocket.com/configure-worker-plugins-vite-2/>
+  - Docs <https://vite-pwa-org.netlify.app/guide/>
   - <https://adueck.github.io/blog/caching-everything-for-totally-offline-pwa-vite-react/>
   - <https://www.youtube.com/watch?v=JnCEXQo_TiI>
