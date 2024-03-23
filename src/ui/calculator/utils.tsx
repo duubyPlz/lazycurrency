@@ -1,6 +1,6 @@
 // TODO Tests
 export const sanitiseAmount = (input: string): number => {
-  const parsedAmount = parseInt(input);
+  const parsedAmount = parseFloat(input);
 
   // If the input isn't a number, return 0
   if (!parsedAmount) return 0;
