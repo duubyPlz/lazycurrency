@@ -31,7 +31,6 @@ const Field = ({ id }: FieldProps) => {
   const [state, actions] = useCalculatorStore();
 
   return (
-    // TODO Logic: Allow decimal places
     <FieldInput
       id={id}
       type='number'
